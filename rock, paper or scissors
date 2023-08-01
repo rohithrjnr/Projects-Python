@@ -1,0 +1,49 @@
+import random
+
+# this is a simple code of a game of rock paper and scissors. My name is Rohith Raj and this is my first of a list of projects im working on
+
+while(True):
+    choice=['rock','paper','scissors']
+    computer=random.choice(choice)
+    user= None
+    while user not in choice:
+        user=input('Enter your Choice(Rock, Paper or Scissor): ').lower()
+        if user==computer:
+            print("Your Choice was: ",user)
+            print("The computer choose: ",computer)
+            print("Its a tie!")
+        elif user=="rock":
+            if computer=="paper":
+                print("Your Choice was: ", user)
+                print("The computer choose: ", computer)
+                print("You lose!!")
+            elif computer=="scissors":
+                print("Your Choice was: ", user)
+                print("The computer choose: ", computer)
+                print("You win!!! Congrats")
+        elif user=="paper":
+            if computer=="scissors":
+                print("Your Choice was: ", user)
+                print("The computer choose: ", computer)
+                print("You lose!!")
+            elif computer=="rock":
+                print("Your Choice was: ", user)
+                print("The computer choose: ", computer)
+                print("You win!!! Congrats")
+        elif user=="scissors":
+            if computer=="rock":
+                print("Your Choice was: ", user)
+                print("The computer choose: ", computer)
+                print("You lose!!")
+            elif computer=="paper":
+                print("Your Choice was: ", user)
+                print("The computer choose: ", computer)
+                print("You win!!! Congrats")
+        else:
+            print("Invalid input")
+    gameover=input("Do you like to play again?(yes/no): ").lower()
+    if gameover!="yes":
+            break
+
+print("Thankyou for playing. Until next time. Bye!")
+
